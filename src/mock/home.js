@@ -11,5 +11,14 @@ export const menuList = [
         name:"高级",
         path:"/home",
         id:'2',
+    },
+    {
+        name:"表格",
+        path:"/table",
+        id:'3',
+        children:[
+            {id:'3_1',name:"主table",path:"/table/text"},
+            {id:'3_2',name:"第一个table",path:"/table/text/one"}
+        ]
     }
 ]

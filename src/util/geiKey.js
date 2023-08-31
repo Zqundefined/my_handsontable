@@ -49,5 +49,4 @@ export function genKey(pKey, days) {
         pKey.substr(20, 5)
     ].join("-");
 }
-console.log('genKey() :>> ', genKey());
 export const ProKey = "bb9ae-e36b7-42aa3-c5b34-a9345"

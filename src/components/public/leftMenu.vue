@@ -14,11 +14,11 @@
             <el-menu-item v-if="!item.children" :index="item.path">
                 <span>{{ item.name }}</span>
             </el-menu-item> 
-            <el-sub-menu v-else v-for="(subItem) in item.children" :key="subItem.id" >
+            <el-sub-menu v-else :index="item.path">
                 <template #title>
                     <span>{{ item.name }}</span>
                 </template>
-                <el-menu-item :index="subItem.path" >{{subItem.name}}</el-menu-item>
+                <el-menu-item v-for="(subItem) in item.children" :key="subItem.id"  :index="subItem.path" >{{subItem.name}}</el-menu-item>
             </el-sub-menu>
         </template>
     </el-menu>
@@ -29,11 +29,11 @@ import { useRoute } from "vue-router";
 import { ref } from "vue";
 
 const route = useRoute()
-console.log('route :>> ', route);
+// console.log('route :>> ', route);
 
 const handleOpen = (key, ...e) => {
     // activeIndex.value = key
-    console.log("handleOpen",key, e)
+    // console.log("handleOpen",key, e)
 }
 const handleClose = (key, keyPath) => {
     // console.log("handleClose",key, keyPath)
