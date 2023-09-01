@@ -24,7 +24,7 @@
     </el-menu>
 </template>
 <script setup>
-import {menuList} from "@/mock/home.js"
+import {menuList} from "@/mock/index.js"
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 

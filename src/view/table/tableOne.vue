@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>table_one</h1>
+        <h1>自定义列</h1>
     </div>
 </template>
 

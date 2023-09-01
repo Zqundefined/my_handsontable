@@ -1,5 +1,8 @@
 <script setup>
 import leftMenu from '@/components/public/leftMenu.vue'
+// import { getCurrentInstance } from "vue"
+// const config = getCurrentInstance()
+// console.log(config.proxy.$tableKey)
 </script>
 
 <template>
@@ -21,7 +24,9 @@ import leftMenu from '@/components/public/leftMenu.vue'
     // width: 15%;
   }
   .content{
+    overflow-y: auto;
     flex: 1;
+    max-height: 100%;
   }
 }
 </style>

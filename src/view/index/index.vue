@@ -1,5 +1,5 @@
 <template>
-    <!-- <hot-table :settings="hotSettings"></hot-table> -->
+    <hot-table :settings="hotSettings"></hot-table>
 </template>
 <script setup>
 import { defineComponent, reactive } from 'vue';
@@ -12,7 +12,9 @@ import { useRouter } from 'vue-router';
 registerAllModules();
 const router = useRouter()
 // console.log(router)
-const hotSettings = reactive()
+const hotSettings = reactive({
+    licenseKey: ProKey,
+})
 
 
 </script>
