@@ -1,7 +1,8 @@
 <template>
     <div>
         <h1>columns Render</h1>
-        <hot-table :ref="hot" :settings="hotSettings"></hot-table>
+        <hot-table ref="hot" :settings="hotSettings"></hot-table>
+        <myinput ref="myinputDom" v-show="false"></myinput>
     </div>
 </template>
 
@@ -15,7 +16,14 @@ import myinput from "@/components/myInput/index.vue"
 // register Handsontable's modules
 registerAllModules();
 const hot = ref(null)
-// HotTable.renderers.registerRenderer('asterix', myinput);
+const myinputDom = ref(null)
+
+onMounted(()=>{
+    // const hotDom = hot.value.hotInstance
+    // console.dir(myinputDom.value.$el)
+    // hot.value.renderers.registerRenderer('asterix', myinput);
+})
+
 const hotSettings = reactive({
     licenseKey: ProKey,
     colWidths: 200,
@@ -27,8 +35,12 @@ const hotSettings = reactive({
     columns: [
         {
             renderer(instance, td, row, col, prop, value) {
-                console.log(hot.value)
-                return td;
+                // const myInput = Object.assign({}, myinputDom.value.$el)
+                const myInput = myinputDom.value.$el
+                console.log(myInput)
+                myInput.style.display = "block"
+                td.appendChild(myInput)
+                return td
             }
         },
         {
@@ -38,7 +50,6 @@ const hotSettings = reactive({
                 img.src = value;
 
                 img.addEventListener('mousedown', event => {
-                    console.log(123123)
                     event.preventDefault();
                 });
 

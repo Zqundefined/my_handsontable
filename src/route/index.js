@@ -39,12 +39,12 @@ const router = createRouter({
                 },
                 {
                     path:"editor",
-                    name:"自定义编辑",
+                    name:"自定义编辑单元格",
                     component:editor
                 },
                 {
                     path:"renderer",
-                    name:"自定义编辑",
+                    name:"自定义单元格编辑",
                     component:renderer
                 }
             ]

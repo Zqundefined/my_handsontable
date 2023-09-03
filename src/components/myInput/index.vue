@@ -12,7 +12,7 @@ const props =  defineProps()
 
 const modalVlue = ref()
 
-console.log(props)
+
 </script>
 
 <style lang="scss" scoped>
