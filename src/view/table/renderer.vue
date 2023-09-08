@@ -37,7 +37,7 @@ const hotSettings = reactive({
             renderer(instance, td, row, col, prop, value) {
                 // const myInput = Object.assign({}, myinputDom.value.$el)
                 const myInput = myinputDom.value.$el
-                console.log(myInput)
+                console.log(myinputDom.value)
                 myInput.style.display = "block"
                 td.appendChild(myInput)
                 return td
